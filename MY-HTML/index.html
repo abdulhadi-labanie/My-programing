@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>JS index.html</title>
+  <link rel="stylesheet" href="muotoilut.css">
+  
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Creepster&family=Dancing+Script:wght@700&family=Permanent+Marker&family=Playfair+Display:ital,wght@1,900&family=Qwitcher+Grypen&family=Work+Sans:ital,wght@0,400;0,500;0,800;1,200;1,600&display=swap" rel="stylesheet">
+    <!-- font -->
+    
+	<style>
+		.button-teh1 {
+		background-color: #ffcc00; /* Green */
+		border: 2px solid #3abdce;
+		color: black;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+    box-shadow: 0 5px 10px 1px #3369cc  ;
+    font-size: 22px;
+	  }
+	  .button-teh1:hover {
+      padding: 18px 36px;
+    }
+	  
+  /*-----------------tehtävä 6 --------------------*/
+        .table-container {
+          width: 100%;
+          margin: 20px 0;
+          overflow-x: auto;
+        }
+      
+        .table-style {
+          width: 100%;
+          border-collapse: collapse;
+          font-family: Arial, sans-serif;
+        }
+      
+        .table-style th, .table-style td {
+          padding: 12px 15px;
+          text-align: center;
+          border: 1px solid #dddddd;
+        }
+      
+        .table-style th {
+          background-color: #f2f2f2;
+          font-weight: bold;
+          color: #333;
+        }
+      
+        .table-style tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+      
+        .table-style tr:hover {
+          background-color: #ddd;
+        }
+  /*-----------------tehtävä 6 --------------------*/
+	</style>
+ </head>
+ <body onload="aloitaKello()">
+
+   <div class="header">
+     <h2> JS index.html </h2>
+     <div class="header_kellotaulu" id="txt"> </div>
+     <script>
+      function aloitaKello() {
+        var aika = new Date();
+        var h = aika.getHours();
+        var m = aika.getMinutes();
+        var s = aika.getSeconds();
+        m = otaAika(m);
+        s = otaAika(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(aloitaKello, 500);
+    }
+  
+    function otaAika(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+     </script> 
+   </div>
+
+   <div class="row">
+
+    <div class="col-3 col-s-3 menu">
+      <ul>
+       <a href="index.html" id="viiva"><li> Tehtävät  1 - 6  </li></a>
+       <a href="sivu1.html" id="viiva"><li> Tehtävät  7 - 12 </li></a>
+       <a href="sivu2.html" id="viiva"><li> Tehtävät 13 - 17 </li></a>
+       <a href="sivu3.html" id="viiva"><li> Tehtävät 18 - 20 </li></a>
+	     <a href="testi.html" id="viiva"><li> Testi</li></a>
+      </ul>
+    </div>
+
+    <div class="col-9 col-s-9">
+      <h3> Tehtävä 1 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+      <div id="koodi"><pre>
+	  
+	  <!--*****************tässä alkaa tehtävä 1**********************-->
+	  
+	&LTp id="testi12"> Näytetään teksti aluksi &LT/p>
+	&LTbutton class="button-teh1" type="button" onclick="omaOhjelma1()">Vaihda teksti1&LT/button>
+	&LTbr>&LTbr>
+	&LTbutton class="button-teh1" type="button" onclick="omaOhjelma2()">Vaihda teksti2&LT/button>
+	&LTp id="testi23"> Näytetään teksti aluksi &LT/p>
+
+	&LTscript>
+		function omaOhjelma1() {
+			document.getElementById("testi12").innerHTML = "Ja teksti on vaihdettu.";
+		}
+	&LT/script>
+  
+	&LTscript>
+		function omaOhjelma2() {
+			document.getElementById("testi23").innerHTML = "Ja teksti on vaihdettu.";
+		}
+	&LT/script>
+  <!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+     </pre></div>
+     
+     <!--===============Koodin tulos www-sivulla:===================-->
+     <h3> Tehtävä 1 = tulos  </h3>
+     <p> Koodin tulos www-sivulla: </p>
+     <div id="koodi-2"><p>
+     
+      <p id="testi12"> Näytetään teksti aluksi </p>
+      <button class="button-teh1" type="button" onclick="omaOhjelma1()">Vaihda teksti1</button>
+      
+      <br><br>
+      
+      <button class="button-teh1" type="button" onclick="omaOhjelma2()">Vaihda teksti2</button>
+      <p id="testi23"> Näytetään teksti aluksi </p>
+    
+      <script>
+        function omaOhjelma1() {
+          document.getElementById("testi12").innerHTML = "Ja teksti on vaihdettu.";
+        }
+      </script>
+      
+      <script>
+        function omaOhjelma2() {
+          document.getElementById("testi23").innerHTML = "Ja teksti on vaihdettu.";
+        }
+      </script>
+    </p></div>
+    <!--===========================================================-->
+
+    
+    
+    
+    <!-------------------------------------------------------------------->
+    
+    <h3> Tehtävä 2 </h3>
+    <p> Lyhyesti mitä koodaus tekee </p>
+    <div id="koodi"><pre>
+      <!--*****************tässä alkaa tehtävä 2**********************-->
+      
+      &LTp id="JSkuva1"> Näytetään teksti aluksi &LT/p>
+      &LTimg src="nuoli2.jpg.jpg"  onclick="omaOhjelma1()">
+      &LTbr>&LTbr>
+      &LTimg src="nuoli3.jpg" width="113px" height="113px"  onclick="omaOhjelma2()">
+      &LTp id="JSkuva2"> Näytetään teksti aluksi &LT/p>
+      
+      
+      
+      &LTscript>
+      function omaOhjelma1() {
+        document.getElementById("JSkuva1").innerHTML = "Ja teksti on vaihdettu.";
+      }
+      &LT/script>
+      
+      &LTscript>
+        function omaOhjelma2() {
+          document.getElementById("JSkuva2").innerHTML = "Ja teksti on vaihdettu.";
+        }
+        &LT/script>
+      </pre></div>
+      
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 2 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+      
+        <p id="JSkuva1"> Näytetään teksti aluksi </p>
+        <img class="img_teh2" src="nuoli2.jpg.jpg"  onclick="omaOhjelma12()">
+        <br><br>
+        <img class="img_teh2" src="nuoli3.jpg" width="113px" height="113px"  onclick="omaOhjelma23()">
+        <p id="JSkuva2"> Näytetään teksti aluksi </p>
+        
+        
+        
+        <script>
+        function omaOhjelma12() {
+          document.getElementById("JSkuva1").innerHTML = "Ja teksti on vaihdettu.";
+        }
+        </script>
+        
+        <script>
+          function omaOhjelma23() {
+            document.getElementById("JSkuva2").innerHTML = "Ja teksti on vaihdettu.";
+          }
+          </script>
+     </p></div>
+      <!--===========================================================-->
+      <!------------------------------Tehtävä 3-------------------------------------->
+      
+      <h3> Tehtävä 3 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+      <div id="koodi"><pre>
+        
+        &LTp id="output">&LT/p>
+        
+        &LTscript>
+        // Määrittele vastusten arvot
+        const R1 = 100;
+        const R2 = 100;
+        const R3 = 100;
+        
+        // Laske yhteisvastus rinnankytkennälle
+        const yhteisvastus = 1 / ((1 / R1) + (1 / R2) + (1 / R3));
+        
+        // Näytä vastusten arvot ja yhteisvastus verkkosivulla
+        const outputElement = document.getElementById("output");
+        outputElement.innerHTML = `R1 = ${R1} Ω&LTbr>`;
+        outputElement.innerHTML += `R2 = ${R2} Ω&LTbr>`;
+        outputElement.innerHTML += `R3 = ${R3} Ω&LTbr>`;
+        outputElement.innerHTML += `Rkok = ${yhteisvastus.toFixed(5)} Ω`;
+        &LT/script>
+      </pre></div>
+      
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 3 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+      
+        <p id="output"></p>
+        
+        <script>
+        // Määrittele vastusten arvot
+        const R1 = 100;
+        const R2 = 100;
+        const R3 = 100;
+        
+        // Laske yhteisvastus rinnankytkennälle
+        const yhteisvastus = 1 / ((1 / R1) + (1 / R2) + (1 / R3));
+        
+        // Näytä vastusten arvot ja yhteisvastus verkkosivulla
+        const outputElement = document.getElementById("output");
+        outputElement.innerHTML  = `R1 = ${R1} Ω<br>`;
+        outputElement.innerHTML += `R2 = ${R2} Ω<br>`;
+        outputElement.innerHTML += `R3 = ${R3} Ω<br>`;
+        outputElement.innerHTML += `Rkok = ${yhteisvastus.toFixed(5)} Ω`;
+        </script>
+     </p></div>
+      <!--===========================================================-->
+      <!-------------------------------Tehtävä 4------------------------------------->
+      
+      <h3> Tehtävä 4 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+      <div id="koodi"><pre>
+        
+        &LTp id="test"></p>
+        
+        &LTscript>
+        
+        /*---------otsikko1----------*/
+        var ost1="&LTh2>Kesäpäivä Metsässä:&LT/h2>";
+        
+        /*---------otsikko2----------*/
+        var ost2="&LTh2>Talvisen Ilta:&LT/h2>";
+        
+        /*---------teksti1----------*/
+        var test1= ("Kerran kesäpäivänä perheemme päätti viettää aikaa luonnossa.\
+        \nLähdimme retkelle metsään. Aurinko paistoi taivaalla,\
+        \nja metsässä oli hiljaista ja rauhallista.");
+        
+        /*---------teksti2----------*/
+        var test2= 
+        ("Talvipäivä oli kylmä, ja lumi peitti maan.\
+        \nIllan pimetessä istuin ikkunan ääressä ja katsoin ulos.\
+        \nTaivas oli täynnä tähtiä, ja kuunvalo valaisi maisemaa.");
+        
+        document.getElementById("test").innerHTML = ost1 + "&LTbr>"+"&LTbr>" + test1 + "&LTbr>" + 
+        "&LTbr>" + ost2 + "&LTbr>"+"&LTbr>" + test2 ;
+        
+        &LT/script>
+        
+      </pre></div>
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 4 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+      
+        <p id="test"></p>
+        
+        <script>
+        
+        /*---------otsikko1----------*/
+        var ost1="<h2>Kesäpäivä Metsässä:</h2>";
+        
+        /*---------otsikko2----------*/
+        var ost2="<h2>Talvisen Ilta:</h2>";
+        
+        /*---------teksti1----------*/
+        var test1= ("Kerran kesäpäivänä perheemme päätti viettää aikaa luonnossa.\
+        \nLähdimme retkelle metsään. Aurinko paistoi taivaalla,\
+        \nja metsässä oli hiljaista ja rauhallista.");
+        
+        /*---------teksti2----------*/
+        var test2= 
+        ("Talvipäivä oli kylmä, ja lumi peitti maan.\
+        \nIllan pimetessä istuin ikkunan ääressä ja katsoin ulos.\
+        \nTaivas oli täynnä tähtiä, ja kuunvalo valaisi maisemaa.");
+        
+        document.getElementById("test").innerHTML = ost1 + "<br>"+"<br>" + test1 + "<br>" + 
+        "<br>" + ost2 + "<br>"+"<br>" + test2 ;
+        
+        </script>
+     </p></div>
+      <!--===========================================================-->
+      <!------------------------------Tehtävä 5-------------------------------------->
+      
+      <h3> Tehtävä 5 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+      <div id="koodi"><pre>
+        
+        &LTp id="taulukko"></p>
+        
+        &LTscript>
+           var taulukko = [["luku1","luku2","luku3","luku4", "Keskiarvo"],[3, 5, 7, 9 ,0]];
+           /*laske Keskiarvo*/
+           taulukko[1][4]= (taulukko[1][0] + taulukko[1][1] + taulukko[1][2] + taulukko[1][3]) /4;
+           
+           document.getElementById("taulukko").innerHTML= 
+           taulukko[0][0] + " = " + taulukko[1][0] + "&LTbr>" +
+           taulukko[0][1] + " = " + taulukko[1][1] + "&LTbr>" +
+           taulukko[0][2] + " = " + taulukko[1][2] + "&LTbr>" +
+           taulukko[0][3] + " = " + taulukko[1][3] + "&LTbr>" +
+           taulukko[0][4] + " = " + taulukko[1][4];
+           
+           &LT/script>
+      
+      </pre></div>
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 5 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+      
+        <p id="taulukko"></p>
+        
+        <script>
+           var taulukko = [["luku1","luku2","luku3","luku4", "Keskiarvo"],[3, 5, 7, 9 ,0]];
+           /*laske Keskiarvo*/
+           taulukko[1][4]= (taulukko[1][0] + taulukko[1][1] + taulukko[1][2] + taulukko[1][3]) /4;
+           
+           document.getElementById("taulukko").innerHTML= 
+           taulukko[0][0] + " = " + taulukko[1][0] + "<br>" +
+           taulukko[0][1] + " = " + taulukko[1][1] + "<br>" +
+           taulukko[0][2] + " = " + taulukko[1][2] + "<br>" +
+           taulukko[0][3] + " = " + taulukko[1][3] + "<br>" +
+           taulukko[0][4] + " = " + taulukko[1][4];
+           
+        </script>
+     </p></div>
+      <!--===========================================================-->
+      
+            <!------------------------------Tehtävä 6-------------------------------------->
+      
+            <h3> Tehtävä 6 </h3>
+            <p> Lyhyesti mitä koodaus tekee </p>
+            <div id="koodi"><pre>
+   &LTp id="taulu"></p>
+
+   &LTscript>
+    var Htaulu = 
+    [ ["malli", "Suurin teho KW/hv", "Arvioitu CO2*", "Autoveroton hinta alv 24%", "Arvioitu Autovero"],
+      ["Diesel"],
+      ["V60 D3 Momentum", "110/150", "137", "35 500€", "5 555,97€"],
+      ["V60 D3 Momentum aut", "110/150", "146", "36 400€", "6 747,80€"],
+      ["V60 D3 AWD Momentum aut", "110/150", "150", "38 400€", "7 697,43€"],
+      ["V60 D4 Momentum", "140/190", "138", "38 000€", "6 047,60€"],
+      ["V60 D4 Momentum aut", "140/190", "145", "39 100€", "7 094,55€"],
+      ["V60 D4 AWD Momentum aut", "140/190", "150", "40 600€", "8 141,49€"] ];
+  
+      document.getElementById("taulu").innerHTML =
+      `&LT;div class="table-container">
+        &LT;table class="table-style">
+        
+          &LT;thead>
+            &LT;tr>
+              &LT;th>${Htaulu[0][0]}&LT;/th>
+              &LT;th>${Htaulu[0][1]}&LT;/th>
+              &LT;th>${Htaulu[0][2]}&LT;/th>
+              &LT;th>${Htaulu[0][3]}&LT;/th>
+              &LT;th>${Htaulu[0][4]}&LT;/th>
+            &LT;/tr>
+          &LT;/thead>
+          
+          &LT;tbody>
+            &LT;tr>
+              &LT;td>${Htaulu[1][0]}&LT;/td>
+            &LT;/tr>
+            
+            &LT;tr>
+              &LT;td>${Htaulu[2][0]}&LT;/td>
+              &LT;td>${Htaulu[2][1]}&LT;/td>
+              &LT;td>${Htaulu[2][2]}&LT;/td>
+              &LT;td>${Htaulu[2][3]}&LT;/td>
+              &LT;td>${Htaulu[2][4]}&LT;/td>
+            &LT;/tr>
+            
+            &LT;tr>
+              &LT;td>${Htaulu[3][0]}&LT;/td>
+              &LT;td>${Htaulu[3][1]}&LT;/td>
+              &LT;td>${Htaulu[3][2]}&LT;/td>
+              &LT;td>${Htaulu[3][3]}&LT;/td>
+              &LT;td>${Htaulu[3][4]}&LT;/td>
+            &LT;/tr>
+            
+            &LT;tr>
+              &LT;td>${Htaulu[4][0]}&LT;/td>
+              &LT;td>${Htaulu[4][1]}&LT;/td>
+              &LT;td>${Htaulu[4][2]}&LT;/td>
+              &LT;td>${Htaulu[4][3]}&LT;/td>
+              &LT;td>${Htaulu[4][4]}&LT;/td>
+            &LT;/tr>
+            
+            &LT;tr>
+              &LT;td>${Htaulu[5][0]}&LT;/td>
+              &LT;td>${Htaulu[5][1]}&LT;/td>
+              &LT;td>${Htaulu[5][2]}&LT;/td>
+              &LT;td>${Htaulu[5][3]}&LT;/td>
+              &LT;td>${Htaulu[5][4]}&LT;/td>
+            &LT;/tr>
+            
+            &LT;tr>
+              &LT;td>${Htaulu[6][0]}&LT;/td>
+              &LT;td>${Htaulu[6][1]}&LT;/td>
+              &LT;td>${Htaulu[6][2]}&LT;/td>
+              &LT;td>${Htaulu[6][3]}&LT;/td>
+              &LT;td>${Htaulu[6][4]}&LT;/td>
+            &LT;/tr>
+            
+          &LT;/tbody>
+          
+        &LT;/table>
+        
+      &LT;/div>`;
+    
+    
+            
+            </pre></div>
+            <!--===============Koodin tulos www-sivulla:===================-->
+            <h3> Tehtävä 6 = tulos  </h3>
+            <p> Koodin tulos www-sivulla: </p>
+            <div id="koodi-2"><pre>
+              <p id="taulu"></p>
+
+              <script>
+                var Htaulu = [
+                  ["malli", "Suurin teho KW/hv", "Arvioitu CO2*", "Autoveroton hinta alv 24%", "Arvioitu Autovero"],
+                  ["Diesel"],
+                  ["V60 D3 Momentum", "110/150", "137", "35 500€", "5 555,97€"],
+                  ["V60 D3 Momentum aut", "110/150", "146", "36 400€", "6 747,80€"],
+                  ["V60 D3 AWD Momentum aut", "110/150", "150", "38 400€", "7 697,43€"],
+                  ["V60 D4 Momentum", "140/190", "138", "38 000€", "6 047,60€"],
+                  ["V60 D4 Momentum aut", "140/190", "145", "39 100€", "7 094,55€"],
+                  ["V60 D4 AWD Momentum aut", "140/190", "150", "40 600€", "8 141,49€"]
+                ];
+              
+                document.getElementById("taulu").innerHTML =
+                `<div class="table-container">
+                  <table class="table-style">
+                    <thead>
+                      <tr>
+                        <th>` + Htaulu[0][0] + `</th>
+                        <th>` + Htaulu[0][1] + `</th>
+                        <th>` + Htaulu[0][2] + `</th>
+                        <th>` + Htaulu[0][3] + `</th>
+                        <th>` + Htaulu[0][4] + `</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>` + Htaulu[1][0] + `</td>
+                      </tr>
+                      <tr>
+                        <td>` + Htaulu[2][0] + `</td>
+                        <td>` + Htaulu[2][1] + `</td>
+                        <td>` + Htaulu[2][2] + `</td>
+                        <td>` + Htaulu[2][3] + `</td>
+                        <td>` + Htaulu[2][4] + `</td>
+                      </tr>
+                      <tr>
+                        <td>` + Htaulu[3][0] + `</td>
+                        <td>` + Htaulu[3][1] + `</td>
+                        <td>` + Htaulu[3][2] + `</td>
+                        <td>` + Htaulu[3][3] + `</td>
+                        <td>` + Htaulu[3][4] + `</td>
+                      </tr>
+                      <tr>
+                        <td>` + Htaulu[4][0] + `</td>
+                        <td>` + Htaulu[4][1] + `</td>
+                        <td>` + Htaulu[4][2] + `</td>
+                        <td>` + Htaulu[4][3] + `</td>
+                        <td>` + Htaulu[4][4] + `</td>
+                      </tr>
+                      <tr>
+                        <td>` + Htaulu[5][0] + `</td>
+                        <td>` + Htaulu[5][1] + `</td>
+                        <td>` + Htaulu[5][2] + `</td>
+                        <td>` + Htaulu[5][3] + `</td>
+                        <td>` + Htaulu[5][4] + `</td>
+                      </tr>
+                      <tr>
+                        <td>` + Htaulu[6][0] + `</td>
+                        <td>` + Htaulu[6][1] + `</td>
+                        <td>` + Htaulu[6][2] + `</td>
+                        <td>` + Htaulu[6][3] + `</td>
+                        <td>` + Htaulu[6][4] + `</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div> `;
+              </script>
+
+           </pre></div>
+            <!--===========================================================-->
+            
+      <!-------------------------------------------------------------------->
+      
+      
+    </div>
+  </div>
+  
+  <div class="Navigate_2">
+    <a href="sivu1.html"><button >Seuraava ></button></a>
+  </div> 
+
+  
+  <div class="footer">
+    <h4> Abdulhadi Labanie &#128526;</h4>
+  </div>
+</body>
+</html>

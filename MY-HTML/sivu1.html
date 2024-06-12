@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>JS Sivu1</title>
+  <link rel="stylesheet" href="muotoilut.css">
+  
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Creepster&family=Dancing+Script:wght@700&family=Permanent+Marker&family=Playfair+Display:ital,wght@1,900&family=Qwitcher+Grypen&family=Work+Sans:ital,wght@0,400;0,500;0,800;1,200;1,600&display=swap" rel="stylesheet">
+    <!-- font -->
+	<style>
+		.button-teh1 {
+		background-color: #4CAF50; /* Green */
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	  }
+	  
+
+	</style>
+ </head>
+ <body onload="aloitaKello()">
+
+   <div class="header">
+     <h2> JS Sivu1.html </h2>
+     <div class="header_kellotaulu" id="txt"> </div>
+     <script>
+      function aloitaKello() {
+        var aika = new Date();
+        var h = aika.getHours();
+        var m = aika.getMinutes();
+        var s = aika.getSeconds();
+        m = otaAika(m);
+        s = otaAika(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(aloitaKello, 500);
+    }
+  
+    function otaAika(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+     </script> 
+   </div>
+
+   <div class="row">
+
+    <div class="col-3 col-s-3 menu">
+      <ul>
+       <a href="index.html" id="viiva"><li> Tehtävät  1 - 6  </li></a>
+       <a href="sivu1.html" id="viiva"><li> Tehtävät  7 - 12 </li></a>
+       <a href="sivu2.html" id="viiva"><li> Tehtävät 13 - 17 </li></a>
+       <a href="sivu3.html" id="viiva"><li> Tehtävät 18 - 20 </li></a>
+	     <a href="testi.html" id="viiva"><li> Testi </li></a>
+      </ul>
+    </div>
+
+    <div class="col-9 col-s-9">
+      <h3> Tehtävä 7 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+      <div id="koodi"><pre>
+	  
+	  <!--*****************tässä alkaa tehtävä 7**********************-->
+	  
+    &LTp id="koe1">&LT/p>
+    &LTp id="koe2">&LT/p>
+
+    &LTscript>
+     var R1=100, R2=70, R3=25, Rsarja;
+ 
+     function kolmeSarjaan() {
+       Rsarja=R1+R2+R3;
+       return Rsarja;
+     }
+     document.getElementById("koe1").innerHTML = "&LTh4>Kokonaisresistanssi kolmen vastuksen sarjakytkennässä :&LT/h4>" +  
+     "R1 = " + R1 + "Ω" + "&LTbr>" +" R2 = " + R2 + "Ω" + "&LTbr>" +" R3 = " + R3 + "Ω" + "&LTbr>" + "Rkok = " + kolmeSarjaan(R1,R2,R3) +"Ω";
+     &LT/script>
+    
+     &LTscript>
+      var R1=100, R2=70, R3=25, Rsarja;
+  
+      function kolmeSarjaan() {
+        Rsarja= 1 / ((1 / R1) + (1 / R2) + (1 / R3));
+        return Rsarja;
+      }
+      document.getElementById("koe2").innerHTML = "&LTh4>Kokonaisresistanssi kolmen vastuksen rinnakkaiskytkennässä :&LT/h4>" +  
+      "R1 = " + R1 + "Ω" + "&LTbr>" +" R2 = " + R2 + "Ω" + "&LTbr>" +" R3 = " + R3 + "Ω" + "&LTbr>" + "Rkok = " + kolmeSarjaan(R1,R2,R3).toFixed(2)+"Ω" ;
+      &LT/script>
+ 
+  <!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+     </pre></div>
+     
+     <!--===============Koodin tulos www-sivulla:===================-->
+     <h3> Tehtävä 7 = tulos  </h3>
+     <p> Koodin tulos www-sivulla: </p>
+     <div id="koodi-2"><p>
+     
+      <p id="koe1"></p>
+      <p id="koe2"></p>
+  
+      <script>
+       var R1=100, R2=70, R3=25, Rsarja;
+   
+       function kolmeSarjaan() {
+         Rsarja=R1+R2+R3;
+         return Rsarja;
+       }
+       document.getElementById("koe1").innerHTML = "<h4>Kokonaisresistanssi kolmen vastuksen sarjakytkennässä :</h4>" + 
+       "R1 = " + R1 + "Ω" + "<br>" +" R2 = " + R2 + "Ω" + "<br>" +" R3 = " + R3 + "Ω" + "<br>" + "Rkok = " + kolmeSarjaan(R1,R2,R3) + "Ω";
+      </script>
+      
+      <script>
+        var R1=100, R2=70, R3=25, Rsarja;
+    
+        function kolmeSarjaan() {
+          Rsarja= 1 / ((1 / R1) + (1 / R2) + (1 / R3));
+          return Rsarja;
+        }
+        document.getElementById("koe2").innerHTML = "<h4>Kokonaisresistanssi kolmen vastuksen rinnakkaiskytkennässä :</h4>" + 
+        "R1 = " + R1 + "Ω" + "<br>" +" R2 = " + R2 + "Ω" + "<br>" +" R3 = " + R3 + "Ω" + "<br>" + "Rkok = " + kolmeSarjaan(R1,R2,R3).toFixed(2)+"Ω" ;
+       </script>
+    </p></div>
+    <!--===========================================================-->
+
+    
+    
+    
+    <!-------------------------------------------------------------------->
+    
+    <h3> Tehtävä 8 </h3>
+    <p> Lyhyesti mitä koodaus tekee </p>
+    <div id="koodi"><pre>
+      <!--*****************tässä alkaa tehtävä 8**********************-->
+      &LT;p id="koe8"></p>
+      
+      &LT;script>
+      
+      var R = 10 , pii = 3.14;
+      var  pallonp = 4 * pii * R**2 , pallont = 4 * pii * R**3 /3 ;
+  
+      document.getElementById("koe8").innerHTML = "pallon pinta-ala = 4 &#215; &#8719; &#215; r&#178;" 
+      + "&LT;br>" + "pallont tilavuus = 4 &#215; &#8719; r&#179; / 3 " 
+      + "&LT;br>" + "&LT;br>" + "Jos pallon säde on 10cm" + "&LT;br>" + 
+      "pallon pinta-ala = " +pallonp + "cm&LT;sup>2&LT;/sup>" + "&LT;br>" + 
+      "pallont tilavuus = " + pallont.toFixed(1) + "cm&LT;sup>3&LT;/sup>";
+  
+      &LT;/script>
+      </pre></div>
+      
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 8 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><pre>
+        <p id="koe8"></p>
+
+        <script>
+        
+        var R = 10 , pii = 3.14;
+        var  pallonp = 4 * pii * R**2 , pallont = 4 * pii * R**3 /3 ;
+    
+        document.getElementById("koe8").innerHTML = 
+        "pallon pinta-ala = 4 &#215; &#8719; &#215; r&#178;" + "<br>" 
+        + "pallont tilavuus = 4 &#215; &#8719; r&#179; / 3 " 
+        + "<br>" + "<br>" + "Jos pallon säde on 10cm :" + "<br>" + "<br>" + "pallon pinta-ala = " +pallonp + "cm<sup>2</sup>" + "<br>" + "pallont tilavuus = " + pallont.toFixed(1) + "cm<sup>3</sup>";
+        </script>
+     </pre></div>
+      <!--===========================================================-->
+      <!------------------------------Tehtävä 9-------------------------------------->
+      
+      <h3> Tehtävä 9 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+      <div id="koodi"><pre>
+        &LT;p id="koe9">&LT;/p>
+
+
+        &LT;script>
+            var R1=50, R2=70, R3=25;
+        
+        function kolmeSarjaan() {
+          Rsarja = 1 / ((1 / R1) + (1 / R2) + (1 / R3));
+          return Rsarja ;
+        }
+        document.getElementById("koe9").innerHTML = "&LT;h4>Kokonaisresistanssi kolmen vastuksen rinnakkaiskytkennässä :&LT;/h4>" + 
+            "R1 = " + R1 + "Ω" + "&LT;br>" +" R2 = " + R2 + "Ω" + "&LT;br>" +" R3 = " + R3 + "Ω" + "&LT;br>" + "Rkok = " + kolmeSarjaan(R1,R2,R3).toFixed(2)+"Ω";
+          &LT;/script>
+
+      </pre></div>
+      
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 9 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+        <p id="koe9"></p>
+
+
+        <script>
+            var R1=50, R2=70, R3=25;
+        
+        function kolmeSarjaan() {
+          Rsarja = 1 / ((1 / R1) + (1 / R2) + (1 / R3));
+          return Rsarja ;
+        }
+        document.getElementById("koe9").innerHTML = "<h4>Kokonaisresistanssi kolmen vastuksen rinnakkaiskytkennässä :</h4>" + 
+            "R1 = " + R1 + "Ω" + "<br>" +" R2 = " + R2 + "Ω" + "<br>" +" R3 = " + R3 + "Ω" + "<br>" + "Rkok = " + kolmeSarjaan(R1,R2,R3).toFixed(2)+"Ω" ;
+        </script>
+
+     </p></div>
+      <!--===========================================================-->
+      <!-------------------------------Tehtävä 10------------------------------------->
+      
+      <h3> Tehtävä 10 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+      <div id="koodi"><pre>
+        
+        &LT;p id="koe10">&LT;/p>
+
+        &LT;script>
+          var koneMERKKI = [ ["BOSCH PBH 2100 RE, ", "Akkuporavasara Ryobi R18SDS-0 18V ONE+, "] , [149 , 179] ];
+      
+         // näyttäminen window.koneMERKKI-koodilla
+         document.getElementById("koe10").innerHTML = "Poravasara = " + koneMERKKI[0][0] + "Hinta = " + koneMERKKI[1][0] + "€" +
+         "&LT;br>&LT;br>Poravasara = " + koneMERKKI[0][1] + "Hinta = " + koneMERKKI[1][1] + "€";
+         &LT;/script>
+        
+      </pre></div>
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 10 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+        <p id="koe10"></p>
+
+        <script>
+          var koneMERKKI = [ ["BOSCH PBH 2100 RE, ", "Akkuporavasara Ryobi R18SDS-0 18V ONE+, "] , [149 , 179] ];
+      
+         // näyttäminen window.koneMERKKI-koodilla
+         document.getElementById("koe10").innerHTML = "Poravasara = " + koneMERKKI[0][0] + "Hinta = " + koneMERKKI[1][0] + "€" +
+         "<br><br>Poravasara = " + koneMERKKI[0][1] + "Hinta = " + koneMERKKI[1][1] + "€";
+        </script>
+
+     </p></div>
+      <!--===========================================================-->
+      <!------------------------------Tehtävä 11-------------------------------------->
+      
+      <h3> Tehtävä 11 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+      <div id="koodi"><pre>
+        &LT;div onmousedown="hiiriPainike(event)" id="HiirenPainelu">
+        &LT;p id="HiirenPainelu">Et ole vielä painanut painiketta &#128527;&LT;/p>
+        &LT;/div>
+     
+        &LT;script>
+           var HiirenPainelu = document.getElementById('HiirenPainelu');
+           HiirenPainelu.addEventListener('contextmenu', function (e) {
+               e.preventDefault();
+           });
+           &LT;/script>
+           
+           &LT;script>
+           function hiiriPainike(event) {
+              if(event.button==0)
+              {
+                document.getElementById("HiirenPainelu").innerHTML = "Painoit hiiren vasenta painiketta tästä &#128072; &#128526;";
+                document.getElementById("HiirenPainelu").style.backgroundColor = "purple";
+              }
+              if(event.button==1)
+              {
+                document.getElementById("HiirenPainelu").innerHTML = "Painoit hiiren keskellä olevan rullan painiketta tästä 	&#128074; &#128519;";
+                document.getElementById("HiirenPainelu").style.backgroundColor = "green";
+              }
+              if(event.button==2)
+              {
+                document.getElementById("HiirenPainelu").innerHTML = "Painoit hiiren oikeaa painiketta tästä &#128073; &#128521;";
+                document.getElementById("HiirenPainelu").style.backgroundColor = "#45b0ae";
+              }
+           }
+           function mikaPainike(event) {
+            alert("Painoit hiiren: " + event.which + " painiketta.")
+          }
+          &LT;/script>
+
+      
+      </pre></div>
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 11 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+      
+        <div onmousedown="hiiriPainike(event)" id="HiirenPainelu">
+          <p id="HiirenPainelu">Et ole vielä painanut painiketta &#128527;</p>
+        </div>
+     
+        <script>
+           var HiirenPainelu = document.getElementById('HiirenPainelu');
+           HiirenPainelu.addEventListener('contextmenu', function (e) {
+               e.preventDefault();
+           });
+              </script>
+           
+        <script>
+           function hiiriPainike(event) {
+              if(event.button==0)
+              {
+                document.getElementById("HiirenPainelu").innerHTML = "Painoit hiiren vasenta painiketta tästä &#128072; &#128526;";
+                document.getElementById("HiirenPainelu").style.backgroundColor = "purple";
+              }
+              if(event.button==1)
+              {
+                document.getElementById("HiirenPainelu").innerHTML = "Painoit hiiren keskellä olevan rullan painiketta tästä 	&#128074; &#128519;";
+                document.getElementById("HiirenPainelu").style.backgroundColor = "green";
+              }
+              if(event.button==2)
+              {
+                document.getElementById("HiirenPainelu").innerHTML = "Painoit hiiren oikeaa painiketta tästä &#128073; &#128521;";
+                document.getElementById("HiirenPainelu").style.backgroundColor = "#45b0ae";
+              }
+           }
+           function mikaPainike(event) {
+            alert("Painoit hiiren: " + event.which + " painiketta.")
+          }
+        </script>
+        <!--===========================================================-->
+     </p></div>
+      
+     <!------------------------------Tehtävä 12-------------------------------------->
+      
+      <h3> Tehtävä 12 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+      <div id="koodi"><pre>
+    
+        &LT;div onmousedown="hiiriPainike2(event)" id="kolmeRinnan">
+        &LT;p>Et ole vielä painanut painiketta &#128527;&LT;/p>
+        &LT;/div>
+        
+        &LT;script>
+          import { kolmeSarjaan, rinnan } from 'script/rinnan.js';
+          
+           var kolmeRinnan = document.getElementById('kolmeRinnan');
+           kolmeRinnan.addEventListener('contextmenu', function (e) {
+               e.preventDefault();
+           });
+           &LT;/script>
+           
+           &LT;script>
+          function hiiriPainike2(event) {
+           event.preventDefault();
+           if(!event.altKey)
+            {
+              document.getElementById("kolmeRinnan").innerHTML = print_kolmeSarjaan();
+              document.getElementById("kolmeRinnan").style.backgroundColor = "#45b0ae";
+            }
+            else
+            {
+              document.getElementById("kolmeRinnan").innerHTML = print_rinnan();
+              document.getElementById("kolmeRinnan").style.backgroundColor = "green";
+            }
+          }
+          &LT;/script>
+      
+    
+      </pre></div>
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 12 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><pre>
+
+        <div onmousedown="hiiriPainike2(event)" id="kolmeRinnan">
+          <p>Et ole vielä painanut painiketta &#128527;</p>
+        </div>
+        
+        <script>
+          /*import { kolmeSarjaan, rinnan } from 'script/rinnan.js';*/
+          
+           var kolmeRinnan = document.getElementById('kolmeRinnan');
+           kolmeRinnan.addEventListener('contextmenu', function (e) {
+               e.preventDefault();
+           });
+        </script>
+           
+        <script>
+          function hiiriPainike2(event) {
+           event.preventDefault();
+           if(!event.altKey)
+            {
+              document.getElementById("kolmeRinnan").innerHTML = print_kolmeSarjaan();
+              document.getElementById("kolmeRinnan").style.backgroundColor = "#45b0ae";
+            }
+            else
+            {
+              document.getElementById("kolmeRinnan").innerHTML = print_rinnan();
+              document.getElementById("kolmeRinnan").style.backgroundColor = "green";
+            }
+          }
+        </script>
+      
+
+      </pre></div>
+      
+      <!--===========================================================-->
+            
+      <!-------------------------------------------------------------------->
+      
+      
+    </div>
+  </div>
+  
+  <div class="Navigate">
+    <div class="Navigate_1">
+      <a href="index.html"><button >< Edellinen</button></a>
+    </div> 
+    <div class="Navigate_2">
+      <a href="sivu2.html"><button >Seuraava ></button></a>
+    </div>  
+  </div> 
+  
+  <div class="footer">
+    <h4> Abdulhadi Labanie &#128526;</h4>
+  </div>
+  <script src="./script/rinnan.js"></script>
+</body>
+</html>

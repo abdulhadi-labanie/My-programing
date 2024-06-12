@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>JS Sivu2</title>
+  <link rel="stylesheet" href="muotoilut.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Creepster&family=Dancing+Script:wght@700&family=Permanent+Marker&family=Playfair+Display:ital,wght@1,900&family=Qwitcher+Grypen&family=Work+Sans:ital,wght@0,400;0,500;0,800;1,200;1,600&display=swap" rel="stylesheet">
+  <!-- font -->
+  
+ </head>
+ <body onload="aloitaKello()">
+
+   <div class="header">
+     <h2> JS sivu2.html </h2>
+     <div class="header_kellotaulu" id="txt"> </div>
+     <script>
+      document.getElementById('txt').innerHTML = aloitaKello()
+     </script> 
+   </div>
+
+  <div class="row">
+
+    <div class="col-3 col-s-3 menu">
+      <ul>
+       <a href="index.html" id="viiva"><li> Tehtävät  1 - 6  </li></a>
+       <a href="sivu1.html" id="viiva"><li> Tehtävät  7 - 12 </li></a>
+       <a href="sivu2.html" id="viiva"><li> Tehtävät 13 - 17 </li></a>
+       <a href="sivu3.html" id="viiva"><li> Tehtävät 18 - 20 </li></a>
+	     <a href="testi.html" id="viiva"><li>Testi</li></a>
+      </ul>
+    </div>
+
+    <div class="col-9 col-s-9">
+      <h3> Tehtävä 13 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+    <div id="koodi"><pre>
+	  
+	  <!--*****************tässä alkaa tehtävä 13**********************-->
+	  
+    &LT;div id="noppa" onmousedown="rollDice()">
+      &LT;p>&LT;img src='img/noppa_1.png'>&LT;/p>
+    &LT;/div>
+    
+    &LT;script>
+    function rollDice() {
+      var noppa = Math.floor(Math.random() * 6) + 1;
+      var noppaElement = document.getElementById('noppa');
+      
+      if (noppa == 1) {
+        noppaElement.innerHTML = "&LT;img src='img/noppa_1.png'>";
+      } else if (noppa == 2) {
+        noppaElement.innerHTML = "&LT;img src='img/noppa_2.png'>";
+      } else if (noppa == 3) {
+        noppaElement.innerHTML = "&LT;img src='img/noppa_3.png'>";
+      } else if (noppa == 4) {
+        noppaElement.innerHTML = "&LT;img src='img/noppa_4.png'>";
+      } else if (noppa == 5) {
+        noppaElement.innerHTML = "&LT;img src='img/noppa_5.png'>";
+      } else if (noppa == 6) {
+        noppaElement.innerHTML = "&LT;img src='img/noppa_6.png'>";
+      }
+    }
+    &LT;/script>
+ 
+    <!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+     </pre></div>
+     
+     <!--===============Koodin tulos www-sivulla:===================-->
+     <h3> Tehtävä 13 = tulos  </h3>
+     <p> Koodin tulos www-sivulla: </p>
+     <div id="koodi-2"><p>
+    <!--===========================================================-->
+
+    <div id="noppa" onmousedown="rollDice()">
+      <p class="noppa"><img src='img/noppa_1.png'></p>
+    </div>
+    
+    <script>
+    function rollDice() {
+      var noppa = Math.floor(Math.random() * 6) + 1;
+      var noppaElement = document.getElementById('noppa');
+      
+      if (noppa == 1) {
+        noppaElement.innerHTML = "<img src='img/noppa_1.png'>";
+      } else if (noppa == 2) {
+        noppaElement.innerHTML = "<img src='img/noppa_2.png'>";
+      } else if (noppa == 3) {
+        noppaElement.innerHTML = "<img src='img/noppa_3.png'>";
+      } else if (noppa == 4) {
+        noppaElement.innerHTML = "<img src='img/noppa_4.png'>";
+      } else if (noppa == 5) {
+        noppaElement.innerHTML = "<img src='img/noppa_5.png'>";
+      } else if (noppa == 6) {
+        noppaElement.innerHTML = "<img src='img/noppa_6.png'>";
+      }
+    }
+    </script>
+
+    <!--===========================================================-->
+    </p></div>
+    
+    
+    <!-------------------------------------------------------------------->
+    
+    <h3> Tehtävä 14 </h3>
+    <p> Lyhyesti mitä koodaus tekee </p>
+    <div id="koodi"><pre>
+      <!--*****************tässä alkaa tehtävä 14**********************-->
+      
+      &LT;p id="aika_T14">&LT;/p>
+
+      &LT;script>
+       var aika = new Date();
+       var paiva = ["sunnuntai","maanantai","tiistai","keskiviikko","torstai","perjantai","lauantai"];
+       var kuukausi = ["tammikuu","helmikuu","maaliskuu","huhtikuu","toukokuu","kesäkuu","heinäkuu","elokuu","syyskuu","lokakuu","marraskuu","joulukuu"];
+       var paivaTeksti = paiva[aika.getDay()];
+       var kuukausiTeksti = kuukausi[aika.getMonth()];
+       document.getElementById("aika_T14").innerHTML = paivaTeksti + " , " + kuukausiTeksti; 
+       &LT;/script> 
+
+      </pre></div>
+      
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 14 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+     <!--===========================================================-->
+      
+     <p id="aika_T14"></p>
+
+     <script>
+      var aika = new Date();
+      var paiva = ["sunnuntai","maanantai","tiistai","keskiviikko","torstai","perjantai","lauantai"];
+      var kuukausi = ["tammikuu","helmikuu","maaliskuu","huhtikuu","toukokuu","kesäkuu","heinäkuu","elokuu","syyskuu","lokakuu","marraskuu","joulukuu"];
+      var paivaTeksti = paiva[aika.getDay()];
+      var kuukausiTeksti = kuukausi[aika.getMonth()];
+      document.getElementById("aika_T14").innerHTML = paivaTeksti + " , " + kuukausiTeksti; 
+     </script> 
+
+     <!--===========================================================-->
+    </p></div>
+    <!------------------------------Tehtävä 15-------------------------------------->
+    
+    <h3> Tehtävä 15 </h3>
+    <p> Lyhyesti mitä koodaus tekee </p>
+    <div id="koodi"><pre>
+    <!--===========================================================-->
+      
+    &LT;p id="aika_T15">&LT;/p>
+  
+    &LT;script>
+       var aika_2 = new Date();
+       var paiva_2 = ["Sunnuntai","Maanantai","Tiistai","Keskiviikko","Torstai","Perjantai","Lauantai"];
+       var kuukausi = ["Tammikuu","Helmikuu","Maaliskuu","Huhtikuu","Toukokuu",
+                       "Kesäkuu","Heinäkuu","Elokuu","Syyskuu","Lokakuu","Marraskuu","Joulukuu"];
+       var paivaTeksti = paiva_2[aika_2.getDay()];
+       var kuukausiTeksti = kuukausi[aika_2.getMonth()];
+       document.getElementById("aika_T15").innerHTML = aika_2.getDate() + ". " + kuukausiTeksti + " " 
+       + aika_2.getFullYear() + " " + paivaTeksti +  " klo " + aika_2.getHours() + ":" + aika_2.getMinutes(); 
+    &LT;/script>     
+      
+    <!--===========================================================-->
+      </pre></div>
+      
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 15 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+    <!--===========================================================-->
+      
+        <p id="aika_T15"></p>
+    
+        <script>
+         var aika_2 = new Date();
+         var paiva_2 = ["Sunnuntai","Maanantai","Tiistai","Keskiviikko","Torstai","Perjantai","Lauantai"];
+         var kuukausi = ["Tammikuu","Helmikuu","Maaliskuu","Huhtikuu","Toukokuu",
+                         "Kesäkuu","Heinäkuu","Elokuu","Syyskuu","Lokakuu","Marraskuu","Joulukuu"];
+         var paivaTeksti = paiva_2[aika_2.getDay()];
+         var kuukausiTeksti = kuukausi[aika_2.getMonth()];
+         document.getElementById("aika_T15").innerHTML = aika_2.getDate() + ". " + kuukausiTeksti + " " 
+         + aika_2.getFullYear() + " " + paivaTeksti +  " klo " + aika_2.getHours() + ":" + aika_2.getMinutes(); 
+        </script> 
+
+    <!--===========================================================-->
+  </p></div>
+  
+  <!-----------------------------Tehtävä 16--------------------------------------->
+  
+  <h3> Tehtävä 16 </h3>
+  <p> Lyhyesti mitä koodaus tekee </p>
+  <div id="koodi"><pre>
+  <!--===========================================================-->
+    &LT;div class="kellotaulu" id="txt"> &LT;/div>
+    &LT;script>
+      function aloitaKello() {
+        var aika = new Date();
+        var h = aika.getHours();
+        var m = aika.getMinutes();
+        var s = aika.getSeconds();
+        m = otaAika(m);
+        s = otaAika(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        document.getElementById('txt_t').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(aloitaKello, 500);
+      }
+    
+      function otaAika(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+      }
+    &LT;/script>       
+        
+  <!--===========================================================-->
+      </pre></div>
+      
+  <!--===============Koodin tulos www-sivulla:===================-->
+     <h3> Tehtävä 16 = tulos  </h3>
+     <p> Koodin tulos www-sivulla: </p>
+     <div id="koodi-2"><p>
+  <!--===========================================================-->
+  
+    <div class="kellotaulu" id="txt_t"> </div>
+    <script>
+      function aloitaKello() {
+        var aika = new Date();
+        var h = aika.getHours();
+        var m = aika.getMinutes();
+        var s = aika.getSeconds();
+        m = otaAika(m);
+        s = otaAika(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        document.getElementById('txt_t').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(aloitaKello, 500);
+    }
+  
+    function otaAika(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+    </script>  
+    
+  <!--===========================================================-->
+    </p></div>
+
+    
+    
+    
+    <!--------------------------------Tehtävä 17------------------------------------>
+    
+    <h3> Tehtävä 17 </h3>
+    <p> Lyhyesti mitä koodaus tekee </p>
+    <div id="koodi"><pre>
+      <!--*****************tässä alkaa tehtävä 14**********************-->
+      
+      &LT;button id="seiko" type="button" onclick="omaAika()">Näytä aika&LT;/button>
+
+      &LT;script>
+      function omaAika() {
+          setTimeout(function() {
+              var aika = new Date();
+              document.getElementById("seiko").innerHTML = aika.toLocaleTimeString();
+              
+              setInterval(function() {
+                  var aika = new Date();
+                  document.getElementById("seiko").innerHTML = aika.toLocaleTimeString();
+              }, 2000); // Päivitä aika 2 sekunnin välein
+          }, 3000); // Odota kolme sekuntia ennen kuin näytät ensimmäisen kerran
+      }
+      &LT;/script>
+      
+      <!--===========================================================-->
+      </pre></div>
+      
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 17 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+    <!--===========================================================-->
+      
+    <button id="seiko" type="button" onclick="omaAika()">Näytä aika</button>
+
+    <script>
+    function omaAika() {
+        setTimeout(function() {
+            var aika = new Date();
+            document.getElementById("seiko").innerHTML = aika.toLocaleTimeString();
+            
+            setInterval(function() {
+                var aika = new Date();
+                document.getElementById("seiko").innerHTML = aika.toLocaleTimeString();
+            }, 2000); // Päivitä aika 2 sekunnin välein
+        }, 3000); // Odota kolme sekuntia ennen kuin näytät ensimmäisen kerran
+    }
+    </script>
+    
+    
+    
+    
+
+    <!--===========================================================-->
+     </p></div>
+
+            
+      <!--------------------------------END------------------------------------>
+    </div>
+  </div>
+  
+  <div class="Navigate_1">
+    <a href="sivu1.html"><button >< Edellinen</button></a>
+  </div> 
+  <div class="Navigate_2">
+    <a href="sivu3.html"><button >Seuraava ></button></a>
+  </div> 
+  
+  <div class="footer">
+    <h4> Abdulhadi Labanie &#128526;</h4>
+  </div>
+</body>
+</html>

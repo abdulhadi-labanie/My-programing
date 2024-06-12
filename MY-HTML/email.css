@@ -1,0 +1,72 @@
+   
+.tehtava {
+    position: relative; 
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	margin-left: 20px;
+}
+.tehtava .tehtavaTeksti {
+    visibility: hidden;
+    width: 400px;
+    background-color: #F0F8FF;
+    color: #000;
+	border: 2px solid #3abdce;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 10px;
+    box-shadow: 7px 7px 9px #cc3399;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 250px;
+    margin-left: -60px;
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.tehtavaTeksti:hover {
+    box-shadow: 4px 4px 9px #ffcc00;
+    padding: 12px 12px;
+    }
+.tehtava .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+.painike {
+   border-top: 1px solid #96d1f8;
+   background: #279c96;
+   background: -webkit-gradient(linear, left top, left bottom, from(#078058), to(#279c96));
+   background: -webkit-linear-gradient(top, #078058, #279c96);
+   background: -moz-linear-gradient(top, #078058, #279c96);
+   background: -ms-linear-gradient(top, #078058, #279c96);
+   background: -o-linear-gradient(top, #078058, #279c96);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 18px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   margin-bottom: 10px;
+}
+.painike:hover {
+   border-top-color: #045e5c;
+   background: #045e5c;
+   color: #fcf805;
+}
+.painike:active {
+   border-top-color: #007d3a;
+   background: #007d3a;
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>JS Sivu2</title>
+  <link rel="stylesheet" href="muotoilut.css">
+  <link rel="stylesheet" href="email.css">
+  
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Creepster&family=Dancing+Script:wght@700&family=Permanent+Marker&family=Playfair+Display:ital,wght@1,900&family=Qwitcher+Grypen&family=Work+Sans:ital,wght@0,400;0,500;0,800;1,200;1,600&display=swap" rel="stylesheet">
+  <!-- font -->
+
+ </head>
+ <body  onload="aloitaKello()">
+
+   <div class="header">
+     <h2> JS sivu3.html  </h2>
+      <div class="header_kellotaulu" id="txt"> </div>
+      <script>
+        function aloitaKello() {
+          var aika = new Date();
+          var h = aika.getHours();
+          var m = aika.getMinutes();
+          var s = aika.getSeconds();
+          m = otaAika(m);
+          s = otaAika(s);
+          document.getElementById('txt').innerHTML =
+          h + ":" + m + ":" + s;
+          var t = setTimeout(aloitaKello, 500);
+      }
+    
+      function otaAika(i) {
+          if (i < 10) {i = "0" + i};  // Lisää nolla, jos minuutit ovat alle 10
+          return i;
+      }
+      </script> 
+
+   </div>
+
+  <div class="row">
+
+    <div class="col-3 col-s-3 menu">
+      <ul>
+       <a href="index.html" id="viiva"><li> Tehtävät  1 - 6  </li></a>
+       <a href="sivu1.html" id="viiva"><li> Tehtävät  7 - 12 </li></a>
+       <a href="sivu2.html" id="viiva"><li> Tehtävät 13 - 17 </li></a>
+       <a href="sivu3.html" id="viiva"><li> Tehtävät 18 - 20 </li></a>
+	     <a href="testi.html" id="viiva"><li> Testi </li></a>
+      </ul>
+    </div>
+
+    <div class="col-9 col-s-9">
+
+      <!------------------------------Tehtävä 18-------------------------------------->
+      
+      <h3> Tehtävä 18 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+      <div id="koodi"><pre>
+      <!--===========================================================-->
+        
+      &LT;p id="taulu1B">&LT;/p>
+
+      &LT;script>
+       var etuNimi = {1: "Matti" , 2: "Joni" , 3:"Heli"};
+       var sukuNimi = {1: "Korkkinen" , 2: "Marki" , 3:"Sinimi"};
+       var ika = {1: "45" , 2: "23" , 3:"75"};
+       
+       document.getElementById("taulu1B").innerHTML = 
+       etuNimi[1] + " " + sukuNimi[1] + " " + ika[1] + "&LT;br>" +
+       etuNimi[2] + " " + sukuNimi[2] + " " + ika[2] + "&LT;br>" +
+       etuNimi[3] + " " + sukuNimi[3] + " " + ika[3] + "&LT;br>";
+       &LT;/script>	
+ 
+      <!--===========================================================-->
+      </pre></div>
+      
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 18 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+      <!--===========================================================-->
+      
+      <p id="taulu1B"></p>
+
+      <script>
+       var etuNimi = {1: "Matti" , 2: "Joni" , 3:"Heli"};
+       var sukuNimi = {1: "Korkkinen" , 2: "Marki" , 3:"Sinimi"};
+       var ika = {1: "45" , 2: "23" , 3:"75"};
+       
+       document.getElementById("taulu1B").innerHTML = 
+       etuNimi[1] + " " + sukuNimi[1] + " " + ika[1] + "<br>" +
+       etuNimi[2] + " " + sukuNimi[2] + " " + ika[2] + "<br>" +
+       etuNimi[3] + " " + sukuNimi[3] + " " + ika[3] + "<br>";
+      </script>	
+
+     <!--===========================================================-->
+     </p></div>
+            
+      <!--------------------------------Tehtävä 19------------------------------------>
+          
+    <h3> Tehtävä 19 </h3>
+    <p> Lyhyesti mitä koodaus tekee </p>
+    <div id="koodi"><pre>
+      
+      &LT;p id="kello_19">&LT;/p>
+            
+      &LT;script>
+          function updateClock() {
+              var aika = new Date();
+              var tunti = aika.getHours().toString();
+              var minu = aika.getMinutes().toString().padStart(2, '0'); // Lisää nolla, jos minuutit ovat alle 10
+              var kello = tunti + ":" + minu;
+      
+              document.getElementById("print_kello").innerHTML = tunti + ":" + minu;
+      
+              if (kello >= "5:01" && kello <= "10:00") {
+                  document.getElementById("kello_19").innerHTML = "Hyvää huomenta &#127748;";
+              } else if (kello >= "10:01" && kello <= "14:00") {
+                  document.getElementById("kello_19").innerHTML = "Hyvää päivää &#127774;";
+              } else if (kello >= "14:01" && kello <= "17:00") {
+                  document.getElementById("kello_19").innerHTML = "Hyvää iltapäivää &#127749;";
+              } else if (kello >= "17:01" && kello <= "23:00") {
+                  document.getElementById("kello_19").innerHTML = "Hyvää iltaa &#127770;";
+              } else {
+                  document.getElementById("kello_19").innerHTML = "Hyvää yötä &#127771;";
+              }
+          }
+      
+          updateClock();
+          setInterval(updateClock, 60000);
+          &LT;/script>
+
+    </pre></div>
+      
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 19 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+      <div id="koodi-2"><p>
+      <!--===========================================================-->
+      
+      <p id="print_kello"></p>
+      <p id="kello_19"></p>
+            
+      <script>
+          function updateClock() {
+              var aika = new Date();
+              var tunti = aika.getHours().toString();
+              var minu = aika.getMinutes().toString().padStart(2, '0'); // Lisää nolla, jos minuutit ovat alle 10
+              var kello = tunti + ":" + minu;
+      
+              document.getElementById("print_kello").innerHTML = tunti + ":" + minu;
+      
+              if (kello >= "5:01" && kello <= "10:00") {
+                  document.getElementById("kello_19").innerHTML = "Hyvää huomenta &#127748;";
+              } else if (kello >= "10:01" && kello <= "14:00") {
+                  document.getElementById("kello_19").innerHTML = "Hyvää päivää &#127774;";
+              } else if (kello >= "14:01" && kello <= "17:00") {
+                  document.getElementById("kello_19").innerHTML = "Hyvää iltapäivää &#127749;";
+              } else if (kello >= "17:01" && kello <= "23:00") {
+                  document.getElementById("kello_19").innerHTML = "Hyvää iltaa &#127770;";
+              } else {
+                  document.getElementById("kello_19").innerHTML = "Hyvää yötä &#127771;";
+              }
+          }
+      
+          updateClock();
+          setInterval(updateClock, 60000);
+      </script>
+      
+
+
+     <!--===========================================================-->
+     </p></div>
+      <!------------------------------Tehtävä 20-------------------------------------->
+      
+      <h3> Tehtävä 20 </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+      <div id="koodi"><pre>
+        
+        &LT;form name="omaEmail" action="/lomakefunktio.php" onsubmit="return tarkistaEmail()" method="post">
+          Email: &LT;input type="text" name="email">
+          &LT;input type="submit" value="Lähetä">
+          &LT;/form>
+         
+        &LT;div id="teht1" class="tehtava">
+          &LT;span class="tehtavaTeksti" id="omaTeht_teksti_1">Oma email puuttuu. Ole hyvä, anna email.&LT;/span> 
+        &LT;/div>
+        
+        &LT;script>
+          function omaTeht_1() {
+            var popup = document.getElementById("omaTeht_teksti_1");
+            popup.classList.toggle("show");
+           }
+           
+            function tarkistaEmail() {
+              var x = document.forms["omaEmail"]["email"].value;
+              if (x == "") {
+                omaTeht_1();
+                return false;
+              }
+            }
+        &LT;/script>
+
+      </pre></div>
+      
+      <!--===============Koodin tulos www-sivulla:===================-->
+      <h3> Tehtävä 20 = tulos  </h3>
+      <p> Koodin tulos www-sivulla: </p>
+     <!--===========================================================-->
+
+     <form name="omaEmail" action="/lomakefunktio.php" onsubmit="return tarkistaEmail()" method="post">
+      Email: <input type="text" name="email">
+      <input type="submit" value="Lähetä">
+      </form>
+     
+    <div id="teht1" class="tehtava">
+      <span class="tehtavaTeksti" id="omaTeht_teksti_1">Oma email puuttuu. Ole hyvä, anna email.</span> 
+    </div>
+    
+    <script>
+      function omaTeht_1() {
+        var popup = document.getElementById("omaTeht_teksti_1");
+        popup.classList.toggle("show");
+       }
+       
+        function tarkistaEmail() {
+          var x = document.forms["omaEmail"]["email"].value;
+          if (x == "") {
+            omaTeht_1();
+            return false;
+          }
+        }
+    </script>
+
+            
+      <!--------------------------------END------------------------------------>
+    </div>
+  </div>
+  
+  <div class="Navigate_1">
+    <a href="sivu2.html"><button >< Edellinen</button></a>
+  </div> 
+  <div class="Navigate_2">
+    <a href="index.html"><button >kotisivu ></button></a>
+  </div>  
+  
+  <div class="footer">
+    <h4> Abdulhadi Labanie &#128526;</h4>
+  </div>
+  
+  <script src="/script/email.js"></script> 
+</body>
+</html>

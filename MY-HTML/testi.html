@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>JS testi</title>
+  <link rel="stylesheet" href="muotoilut.css">
+  <link rel="stylesheet" href="noppa.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Creepster&family=Dancing+Script:wght@700&family=Permanent+Marker&family=Playfair+Display:ital,wght@1,900&family=Qwitcher+Grypen&family=Work+Sans:ital,wght@0,400;0,500;0,800;1,200;1,600&display=swap" rel="stylesheet">
+  <!-- font -->
+  
+ </head>
+ 
+ <body onload="aloitaKello()">
+
+   <div class="header">
+     <h2> JS testi.html </h2>
+     <div class="header_kellotaulu" id="txt"> </div>
+     <script>
+      function aloitaKello() {
+        var aika = new Date();
+        var h = aika.getHours();
+        var m = aika.getMinutes();
+        var s = aika.getSeconds();
+        m = otaAika(m);
+        s = otaAika(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(aloitaKello, 500);
+    }
+  
+    function otaAika(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+     </script> 
+   </div>
+
+    <div class="row">
+  
+    <div class="col-3 col-s-3 menu">
+      <ul>
+       <a href="index.html" id="viiva"><li> Tehtävät  1 - 6  </li></a>
+       <a href="sivu1.html" id="viiva"><li> Tehtävät  7 - 12 </li></a>
+       <a href="sivu2.html" id="viiva"><li> Tehtävät 13 - 17 </li></a>
+       <a href="sivu3.html" id="viiva"><li> Tehtävät 18 - 20 </li></a>
+	     <a href="testi.html" id="viiva"><li> Testi </li></a>
+      </ul>
+    </div>
+  
+    <div class="col-9 col-s-9">
+      <h3> Testi koodin </h3>
+      <p> Lyhyesti mitä koodaus tekee </p>
+    <div id="koodi"><pre>
+  	  
+  	<!--*****************tässä alkaa tehtävä 13**********************-->
+
+
+   
+    <!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+       </pre></div>
+       
+       <!--===============Koodin tulos www-sivulla:===================-->
+       <h3> Testi = tulos  </h3>
+       <p> Koodin tulos www-sivulla: </p>
+       <div id="koodi-2"><p>
+   <!--===========================================================-->
+
+   
+   <!--===========================================================-->
+      </p></div> 
+    <!--===========================================================-->
+  
+  
+  
+        
+      </div>
+    </div>
+    
+    <div class="footer">
+      <h4> Abdulhadi Labanie &#128526;</h4>
+    </div>
+    
+    <script src="./script/kello.js"></script>
+    <script src="/script/email.js"></script>
+  </body>
+</html>
