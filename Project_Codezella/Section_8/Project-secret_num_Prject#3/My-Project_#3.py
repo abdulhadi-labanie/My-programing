@@ -23,7 +23,7 @@ else:
 ###----------------------------------------------------------------###
 ###----------------------------------------------------------------###
 
-print("It is the time to see if we could do better")
+print("It is the time to see if we could do better.")
 print("-" * 35)
 
 num = float(input("Enter the number: "))
