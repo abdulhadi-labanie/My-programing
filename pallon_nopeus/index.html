@@ -1,92 +1,107 @@
 <!DOCTYPE html>
 <html>
  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>JS index.html</title>
   <link rel="stylesheet" href="style.css">
-	
+  
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Creepster&family=Dancing+Script:wght@700&family=Permanent+Marker&family=Playfair+Display:ital,wght@1,900&family=Qwitcher+Grypen&family=Work+Sans:ital,wght@0,400;0,500;0,800;1,200;1,600&display=swap" rel="stylesheet">
+    <!-- font -->
+    
  </head>
- 
- <!-- This is my code :) -->
- 
- <body>
+ <body onload="aloitaKello()">
 
    <div class="header">
-     <h2> JS index.html </h2>
+     <h2> Pallon Nopeus </h2>
+     <div class="header_kellotaulu" id="txt"> </div>
+     <script>
+      function aloitaKello() {
+        var aika = new Date();
+        var h = aika.getHours();
+        var m = aika.getMinutes();
+        var s = aika.getSeconds();
+        m = otaAika(m);
+        s = otaAika(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(aloitaKello, 500);
+    }
+  
+    function otaAika(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+     </script> 
+     
    </div>
 
    <div class="row">
 
-    <div class="col-3 col-s-3 menu">
-      <ul>
-       <a href="index.html" id="viiva"><li> Tehtävät  1 - 6  </li></a>
-       <a href="sivu1.html" id="viiva"><li> Tehtävät  7 - 12 </li></a>
-       <a href="sivu2.html" id="viiva"><li> Tehtävät 13 - 15 </li></a>
-	     <a href="testi.html" id="viiva"><li> testi </li></a>
-      </ul>
-    </div>
-
     <div class="col-9 col-s-9">
-      <h3> Tehtävä 1 </h3>
-      <p> Lyhyesti mitä koodaus tekee </p>
-      <div id="koodi"><pre>
-	  
-<!--*****************tässä alkaa tehtävä 1**********************-->
-
-
-<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
-     </pre></div>
      
-     <!--===============Koodin tulos www-sivulla:===================-->
-     <h3> Tehtävä 1 = tulos  </h3>
-     <p> Koodin tulos www-sivulla: </p>
-     <div id="koodi-2"><p>
+<!--===============Koodin tulos www-sivulla:===================-->
+<h3> Tehtävä 1 = tulos  </h3>
+<p> Koodin tulos www-sivulla: </p>
+<div id="koodi-2"><p>
 <!--===========================================================-->
-       
-  <div class="row">
+  
+  <div class="row1">
     <div class="column">
-        <img src="/img/level_1.jpg" alt="img level 1 not found">
-        <h3>level: 1</h3>
+      <h3>level: 1 = 5.2m</h3>
+      <img src="/img/level_1.jpg" alt="img level 1 not found">
     </div>
     <div class="column">
-        <img src="/img/level_2.jpg" alt="img level 2 not found">
-        <h3>level: 2</h3>
+      <h3>level: 2 = 9.9m</h3>
+      <img src="/img/level_2.jpg" alt="img level 2 not found">
     </div>
     <div class="column">
-        <img src="/img/level_3.jpg" alt="img level 3 not found">
-        <h3>level: 3</h3>
-  </div>
-
-  <div class="row">
-    <div class="column">
-        <img src="/img/level_4.jpg" alt="img level 4 not found">
-        <h3>level: 4</h3>
-    </div>
-    <div class="column">
-        <img src="/img/level_5.jpg" alt="img level 5 not found">
-        <h3>level: 5</h3>
-    </div>
-    <div class="column">
-        <img src="/img/level_6.jpg" alt="img level 6 not found">
-        <h3>level: 6</h3>
-    </div>
-  </div>
-</div>
-       
-<!-- ******************************************************** -->
-      </div>
-    <!-------------------------------------------------------------------->
-
-            
-    <!-------------------------------------------------------------------->
-      
-      
+      <h3>level: 3 = 16.5m</h3>
+      <img src="/img/level_3.jpg" alt="img level 3 not found">
     </div>
   </div>
   
-  <div class="footer">
-    <h4> Abdulhadi Labanie</h4>
+  <div class="row1">
+    <div class="column">
+      <h3>level: 4 = 20.1m</h3>
+      <img src="/img/level_4.jpg" alt="img level 4 not found">
+    </div>
+    <div class="column">
+      <h3>level: 5 = 23.7m</h3>
+       <img src="/img/level_5.jpg" alt="img level 5 not found">
+    </div>
+    <div class="column">
+      <h3>level: 6 = 31m</h3>
+      <img src="/img/level_6.jpg" alt="img level 6 not found">
+    </div>
   </div>
-  <script src="main.js"></script>
+    
+<!-- ******************************************************** -->
+  <div class="input_contener">
+    <div id="input">
+      <input type="text" id="eteisyys" placeholder="Type eteisyys...">
+      <input type="text" id="aika" placeholder="Type aika...">
+      <button onclick="modifyInput()">Lähettä</button>
+    </div>
+  </div>
+  
+
+<!--===========================================================-->
+</div>
+
+
+            
+<!--------------------------------------------------------------->
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <h4> Abdulhadi Labanie &#128526;</h4>
+  </div>
+  <script src="/main.js"></script>
 </body>
 </html>
