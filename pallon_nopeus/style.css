@@ -253,20 +253,116 @@ text-align: center;
 }
 
 
-.row img{
+/* القاعدة العامة */
+.row img {
   width: 300px;
   height: 300px;
-  
 }
 
-.row1{
-  
+.row1 {
   display: flex;
   gap: 30px;
   justify-content: center; /* لتوسيط أفقياً */
   align-items: center;    /* لتوسيط عمودياً */
-  /* height: 10vh;         مثال لتوسيط عمودياً داخل نافذة العرض */
 }
+
+/* حجم الخط الافتراضي */
+body {
+  font-size: 16px;
+}
+
+/* وضعية الهاتف المحمول (أقل من 600 بكسل) */
+@media (max-width: 599px) {
+  .row img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .row1 {
+    flex-wrap: wrap; /* يسمح بتغليف العناصر */
+    gap: 10px; /* مسافة أقل بين العناصر */
+  }
+
+  .row1 .row {
+    width: 50%; /* عرض 50% لتكون بجانب بعضها البعض */
+    display: flex;
+    justify-content: center;
+  }
+
+  body {
+    font-size: 12px; /* حجم خط أصغر */
+  }
+}
+
+/* وضعية الكمبيوتر اللوحي (600 بكسل إلى 899 بكسل) */
+@media (min-width: 600px) and (max-width: 899px) {
+  .row img {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .row1 {
+    flex-direction: row;
+    gap: 20px; /* مسافة متوسطة بين العناصر */
+  }
+
+  body {
+    font-size: 12px; /* حجم خط متوسط */
+  }
+}
+
+/* وضعية اللابتوب الصغيرة (900 بكسل إلى 1199 بكسل) */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .row img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .row1 {
+    flex-direction: row;
+    gap: 25px; /* مسافة متوسطة بين العناصر */
+  }
+
+  body {
+    font-size: 15px; /* حجم خط أكبر قليلاً */
+  }
+}
+
+/* وضعية اللابتوب الكبيرة (1200 بكسل إلى 1599 بكسل) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .row img {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .row1 {
+    flex-direction: row;
+    gap: 30px; /* مسافة أكبر بين العناصر */
+  }
+
+  body {
+    font-size: 16px; /* حجم الخط الافتراضي */
+  }
+}
+
+/* وضعية الكمبيوتر المكتبي (1600 بكسل وأعلى) */
+@media (min-width: 1600px) {
+  .row img {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .row1 {
+    flex-direction: row;
+    gap: 30px; /* نفس المسافة بين العناصر */
+  }
+
+  body {
+    font-size: 18px; /* حجم خط أكبر */
+  }
+}
+
+/* -----------end_img-------------- */
 
 button {
   background-color: #4CAF50;
