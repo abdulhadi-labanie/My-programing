@@ -56,10 +56,11 @@ between 452 and 983 and are divisible by 5 and 7.\n\n''')
 
 div_5_7 = []
 
-for i in range(452, 983):
+for i in range(452, 984):
   if i % 5 == 0 and i % 7 == 0:
     div_5_7.append(i)
 
 averge = div_5_7[1] + div_5_7[-2] / 2
 
-print('5. The averge is =', averge)
+print(f'5. The second highest num is {div_5_7[1]} and second lowest num is {div_5_7[-2]}\
+.\nnumbers averge is =', averge)
