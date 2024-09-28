@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Abdulhadi\\OneDrive\\Desktop\\PROGRAMMING-ADVICES\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\",
+  "WorkspaceRootPath": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF9B1B72-FB57-4D2C-BD27-F1BA34F30CB5}|#20 - Arithmetic Operators\\#20 - Arithmetic Operators.vcxproj|C:\\Users\\Abdulhadi\\OneDrive\\Desktop\\PROGRAMMING-ADVICES\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EF9B1B72-FB57-4D2C-BD27-F1BA34F30CB5}|#20 - Arithmetic Operators\\#20 - Arithmetic Operators.vcxproj|solutionrelative:#20 - Arithmetic Operators\\#20 - Arithmetic Operators.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{418B391B-A11B-4A2D-9FC4-747D66C3781E}|#20 - Arithmetic Operators\\#20 - Arithmetic Operators.vcxproj|C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{418B391B-A11B-4A2D-9FC4-747D66C3781E}|#20 - Arithmetic Operators\\#20 - Arithmetic Operators.vcxproj|solutionrelative:#20 - Arithmetic Operators\\#20 - Arithmetic Operators.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,18 +20,14 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "#20 - Arithmetic Operators.cpp",
-              "DocumentMoniker": "C:\\Users\\Abdulhadi\\OneDrive\\Desktop\\PROGRAMMING-ADVICES\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators.cpp",
+              "DocumentMoniker": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators.cpp",
               "RelativeDocumentMoniker": "#20 - Arithmetic Operators\\#20 - Arithmetic Operators.cpp",
-              "ToolTip": "C:\\Users\\Abdulhadi\\OneDrive\\Desktop\\PROGRAMMING-ADVICES\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators.cpp",
+              "ToolTip": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators\\#20 - Arithmetic Operators.cpp",
               "RelativeToolTip": "#20 - Arithmetic Operators\\#20 - Arithmetic Operators.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-25T16:11:06.363Z",
+              "WhenOpened": "2024-09-26T19:35:53.02Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
