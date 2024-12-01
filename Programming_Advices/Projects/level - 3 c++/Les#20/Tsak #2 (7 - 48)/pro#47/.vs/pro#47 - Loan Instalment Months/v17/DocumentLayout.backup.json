@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Abdulhadi\\source\\repos\\pro#47 - Loan Instalment Months\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD11DDE-3326-42E6-8256-1FA9029DD127}|pro#47 - Loan Instalment Months\\pro#47 - Loan Instalment Months.vcxproj|C:\\Users\\Abdulhadi\\source\\repos\\pro#47 - Loan Instalment Months\\pro#47 - Loan Instalment Months\\pro#47 - Loan Instalment Months.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EDD11DDE-3326-42E6-8256-1FA9029DD127}|pro#47 - Loan Instalment Months\\pro#47 - Loan Instalment Months.vcxproj|solutionrelative:pro#47 - Loan Instalment Months\\pro#47 - Loan Instalment Months.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "pro#47 - Loan Instalment Months.cpp",
+              "DocumentMoniker": "C:\\Users\\Abdulhadi\\source\\repos\\pro#47 - Loan Instalment Months\\pro#47 - Loan Instalment Months\\pro#47 - Loan Instalment Months.cpp",
+              "RelativeDocumentMoniker": "pro#47 - Loan Instalment Months\\pro#47 - Loan Instalment Months.cpp",
+              "ToolTip": "C:\\Users\\Abdulhadi\\source\\repos\\pro#47 - Loan Instalment Months\\pro#47 - Loan Instalment Months\\pro#47 - Loan Instalment Months.cpp*",
+              "RelativeToolTip": "pro#47 - Loan Instalment Months\\pro#47 - Loan Instalment Months.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-28T09:26:43.876Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

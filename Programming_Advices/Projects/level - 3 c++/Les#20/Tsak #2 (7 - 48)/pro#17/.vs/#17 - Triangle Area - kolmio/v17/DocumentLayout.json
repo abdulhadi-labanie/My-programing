@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\Tsak #2 (7 - 48)\\#17 - Triangle Area - kolmio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5384EBD7-E4EC-441F-9849-C836CE1FFE99}|#17 - Triangle Area - kolmio\\#17 - Triangle Area - kolmio.vcxproj|C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\Tsak #2 (7 - 48)\\#17 - Triangle Area - kolmio\\#17 - Triangle Area - kolmio\\#17 - Triangle Area - kolmio.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5384EBD7-E4EC-441F-9849-C836CE1FFE99}|#17 - Triangle Area - kolmio\\#17 - Triangle Area - kolmio.vcxproj|solutionrelative:#17 - Triangle Area - kolmio\\#17 - Triangle Area - kolmio.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "#17 - Triangle Area - kolmio.cpp",
+              "DocumentMoniker": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\Tsak #2 (7 - 48)\\#17 - Triangle Area - kolmio\\#17 - Triangle Area - kolmio\\#17 - Triangle Area - kolmio.cpp",
+              "RelativeDocumentMoniker": "#17 - Triangle Area - kolmio\\#17 - Triangle Area - kolmio.cpp",
+              "ToolTip": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\Tsak #2 (7 - 48)\\#17 - Triangle Area - kolmio\\#17 - Triangle Area - kolmio\\#17 - Triangle Area - kolmio.cpp",
+              "RelativeToolTip": "#17 - Triangle Area - kolmio\\#17 - Triangle Area - kolmio.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-27T12:26:20.877Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

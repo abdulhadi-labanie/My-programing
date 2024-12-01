@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\Tsak #2 (7 - 48)\\pro#10\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8F871856-D4CF-4000-B5F2-9CFD0A607DC4}|pro#10\\pro#10.vcxproj|C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\Tsak #2 (7 - 48)\\pro#10\\pro#10\\pro#10.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8F871856-D4CF-4000-B5F2-9CFD0A607DC4}|pro#10\\pro#10.vcxproj|solutionrelative:pro#10\\pro#10.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "pro#10.cpp",
+              "DocumentMoniker": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\Tsak #2 (7 - 48)\\pro#10\\pro#10\\pro#10.cpp",
+              "RelativeDocumentMoniker": "pro#10\\pro#10.cpp",
+              "ToolTip": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\#20 - Arithmetic Operators\\Tsak #2 (7 - 48)\\pro#10\\pro#10\\pro#10.cpp",
+              "RelativeToolTip": "pro#10\\pro#10.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-26T20:55:59.603Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
