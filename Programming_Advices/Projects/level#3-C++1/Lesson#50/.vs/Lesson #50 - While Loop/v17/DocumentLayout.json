@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\Lesson #50 - While Loop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6D9B5F09-9641-489C-B9E7-86EAAE577780}|Lesson #50 - While Loop\\Lesson #50 - While Loop.vcxproj|C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\Lesson #50 - While Loop\\Lesson #50 - While Loop\\Lesson #50 - While Loop.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6D9B5F09-9641-489C-B9E7-86EAAE577780}|Lesson #50 - While Loop\\Lesson #50 - While Loop.vcxproj|solutionrelative:Lesson #50 - While Loop\\Lesson #50 - While Loop.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Lesson #50 - While Loop.cpp",
+              "DocumentMoniker": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\Lesson #50 - While Loop\\Lesson #50 - While Loop\\Lesson #50 - While Loop.cpp",
+              "RelativeDocumentMoniker": "Lesson #50 - While Loop\\Lesson #50 - While Loop.cpp",
+              "ToolTip": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\Lesson #50 - While Loop\\Lesson #50 - While Loop\\Lesson #50 - While Loop.cpp",
+              "RelativeToolTip": "Lesson #50 - While Loop\\Lesson #50 - While Loop.cpp",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAswHoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-09T12:12:52.304Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
