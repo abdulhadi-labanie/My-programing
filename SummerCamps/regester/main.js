@@ -78,3 +78,22 @@ document.addEventListener('DOMContentLoaded', function () {
         form.reset();
     });
 });
+
+
+// Smooth scroll for navigation
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        targetSection.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Button click event
+document.getElementById('learnMoreBtn').addEventListener('click', () => {
+    document.getElementById('about').scrollIntoView({
+        behavior: 'smooth'
+    });
+});

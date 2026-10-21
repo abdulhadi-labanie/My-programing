@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\Lesson #42 - IF-IF Else Statement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C808AF36-E510-49F8-A5C0-18694E1C4C96}|Lesson #42 - IF-IF Else Statement\\Lesson #42 - IF-IF Else Statement.vcxproj|C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\Lesson #42 - IF-IF Else Statement\\Lesson #42 - IF-IF Else Statement\\Lesson #42 - IF-IF Else Statement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C808AF36-E510-49F8-A5C0-18694E1C4C96}|Lesson #42 - IF-IF Else Statement\\Lesson #42 - IF-IF Else Statement.vcxproj|solutionrelative:Lesson #42 - IF-IF Else Statement\\Lesson #42 - IF-IF Else Statement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Lesson #42 - IF-IF Else Statement.cpp",
+              "DocumentMoniker": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\Lesson #42 - IF-IF Else Statement\\Lesson #42 - IF-IF Else Statement\\Lesson #42 - IF-IF Else Statement.cpp",
+              "RelativeDocumentMoniker": "Lesson #42 - IF-IF Else Statement\\Lesson #42 - IF-IF Else Statement.cpp",
+              "ToolTip": "C:\\MY_Programs\\Github\\My-programing\\Programming_Advices\\Projects\\level - 3 c\u002B\u002B\\Lesson #42 - IF-IF Else Statement\\Lesson #42 - IF-IF Else Statement\\Lesson #42 - IF-IF Else Statement.cpp",
+              "RelativeToolTip": "Lesson #42 - IF-IF Else Statement\\Lesson #42 - IF-IF Else Statement.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwCEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-07T20:01:31.38Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
