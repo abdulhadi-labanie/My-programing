@@ -1,0 +1,176 @@
+#include <iostream>
+using namespace std;
+
+struct stDate {
+    int Year;
+    int Month;
+    int Day;
+};
+
+struct stPeriod
+{
+    stDate StartPeriod;
+    stDate EndPeriod;
+};
+
+bool isLeapYear(int Year) {
+    return (Year % 4 == 0 && Year % 100 != 0) || (Year % 400 == 0);
+}
+
+int NumberOfDaysInAMonth(int Year, int Month) {
+    if (Month < 1 || Month > 12)
+        return 0;
+
+    int days[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+    return (Month == 2) ? (isLeapYear(Year) ? 29 : 28) : days[Month - 1];
+}
+
+bool IsLastDayInMonth(stDate Date) {
+    return Date.Day == NumberOfDaysInAMonth(Date.Month, Date.Year);
+}
+
+bool IsLastMonthInYear(short Month) {
+    return Month == 12;
+}
+
+stDate IncreaseDateByOneDay(stDate Date) {
+    if (IsLastDayInMonth(Date)) {
+        if (IsLastMonthInYear(Date.Month)) {
+            Date.Day = 1;
+            Date.Month = 1;
+            Date.Year++;
+        }
+        else {
+            Date.Day = 1;
+            Date.Month++;
+        }
+    }
+    else {
+        Date.Day++;
+    }
+    return Date;
+}
+
+bool IsDate1BeforeDate2(stDate Date1, stDate Date2) {
+    if (Date1.Year < Date2.Year)
+        return true;
+    else if (Date1.Year == Date2.Year) {
+        if (Date1.Month < Date2.Month)
+            return true;
+        else if (Date1.Month == Date2.Month)
+            return Date1.Day < Date2.Day;
+    }
+    return false;
+}
+
+bool IsDate1EqualDate2(stDate Date1, stDate Date2)
+{
+    return (Date1.Year == Date2.Year) ? (Date1.Month == Date2.Month) ? (Date1.Day == Date2.Day) ? true : false : false : false;
+}
+
+bool IsDate1AfterDate2(stDate Date1, stDate Date2)
+{
+    return (!IsDate1BeforeDate2(Date1, Date2) && !IsDate1EqualDate2(Date1, Date2));
+}
+
+enum enDateCompare { Before = -1, Equal = 0, After = 1 };
+
+short GetPeriodLenghth(stPeriod Period, bool PlusEndDay = false)
+{
+    stDate DateCounter = Period.StartPeriod;
+    short counter = 0; 
+
+    while (IsDate1BeforeDate2(DateCounter, Period.EndPeriod))
+    {
+        DateCounter = IncreaseDateByOneDay(DateCounter);
+        counter++;
+    }
+    
+    return (PlusEndDay) ? ++counter : counter;
+}
+
+short ReadDay(string text, int min, int max) {
+    short Day;
+
+    do
+    {
+        cout << text;
+        cin >> Day;
+        cout << endl;
+    } while (Day < min || Day > max);
+
+    return Day;
+}
+
+short ReadMonth(string text, int min, int max) {
+    short Month;
+    do
+    {
+        cout << text;
+        cin >> Month;
+        cout << endl;
+    } while (Month < min || Month > max);
+    return Month;
+}
+
+short ReadYear(string text, int min, int max) {
+    short Year;
+    do
+    {
+        cout << text;
+        cin >> Year;
+        cout << endl;
+    } while (Year < min || Year > max);
+    return Year;
+}
+
+stDate ReadFullDate() {
+    stDate Date;
+    Date.Day = ReadDay("\nPlease enter a Day? ", 1, 31);
+    Date.Month = ReadMonth("Please enter a Month? ", 1, 12);
+    Date.Year = ReadYear("Please enter a Year? ", 1, 30000);
+
+    while (Date.Day > NumberOfDaysInAMonth(Date.Year, Date.Month))
+    {
+        cout << "Error: the Day " << Date.Day << " is not in Month " << Date.Month << "!\n";
+        cout << "Enter between 1-" << NumberOfDaysInAMonth(Date.Year, Date.Month) << "!!!\n\n";
+
+        Date.Day = ReadDay("\nPlease enter a Day? ", 1, 31);
+        Date.Month = ReadMonth("Please enter a Month? ", 1, 12);
+        Date.Year = ReadYear("Please enter a Year? ", 1, 30000);
+    }
+
+    return Date;
+}
+
+stPeriod ReadPeriod()
+{
+    stPeriod period;
+
+    do
+    {
+        cout << "Enter start day:\n";
+        period.StartPeriod = ReadFullDate();
+
+        cout << "Enter End day:\n";
+        period.EndPeriod = ReadFullDate();
+
+    } while (IsDate1AfterDate2(period.StartPeriod, period.EndPeriod));
+
+    return period;
+}
+
+int main() {
+
+    stPeriod period1;
+
+    cout << "Enter Period 1:\n";
+    period1 = ReadPeriod();
+
+    cout << "\nPeriod Length is: " << GetPeriodLenghth(period1);
+    cout << "\nPeriod Length (Including End Date) is: " << GetPeriodLenghth(period1, true);
+    
+
+    system("pause>0");
+    return 0;
+}
