@@ -29,12 +29,10 @@ private:
 
         return clsBankClient(enMode::UpdateMode, vClientData[0], vClientData[1], vClientData[2],
             vClientData[3], vClientData[4], vClientData[5], stod(vClientData[6]));
-
     }
 
     static string _ConverClientObjectToLine(clsBankClient Client, string Seperator = "#//#")
     {
-
         string stClientRecord = "";
         stClientRecord += Client.FirstName + Seperator;
         stClientRecord += Client.LastName + Seperator;
@@ -45,7 +43,6 @@ private:
         stClientRecord += to_string(Client.AccountBalance);
 
         return stClientRecord;
-
     }
 
     static  vector <clsBankClient> _LoadClientsDataFromFile()
@@ -96,15 +93,11 @@ private:
                     //we only write records that are not marked for delete.  
                     DataLine = _ConverClientObjectToLine(C);
                     MyFile << DataLine << endl;
-
                 }
-
             }
 
             MyFile.close();
-
         }
-
     }
 
     void _Update()
@@ -205,6 +198,8 @@ public:
     }
     __declspec(property(get = GetAccountBalance, put = SetAccountBalance)) float AccountBalance;
 
+   /* 
+      No UI Related code iside object.
     void Print()
     {
         cout << "\nClient Card:";
@@ -219,7 +214,7 @@ public:
         cout << "\nBalance     : " << _AccountBalance;
         cout << "\n___________________\n";
 
-    }
+    }*/
 
     static clsBankClient Find(string AccountNumber)
     {
@@ -325,8 +320,6 @@ public:
         }
         }
 
-
-
     }
 
     static bool IsClientExist(string AccountNumber)
@@ -348,7 +341,6 @@ public:
                 C._MarkedForDelete = true;
                 break;
             }
-
         }
 
         _SaveCleintsDataToFile(_vClients);
@@ -369,21 +361,19 @@ public:
         return _LoadClientsDataFromFile();
     }
 
-    static float GetTotalBalances()
+    static double GetTotalBalances()
     {
         vector <clsBankClient> vClients = clsBankClient::GetClientsList();
 
         double TotalBalances = 0;
 
-            for (clsBankClient Client : vClients)
-            {
+        for (clsBankClient Client : vClients)
+        {
 
-                TotalBalances += Client.AccountBalance;
-            }
+            TotalBalances += Client.AccountBalance;
+        }
 
-            return TotalBalances;
+        return TotalBalances;
 
     }
-
-
 };
