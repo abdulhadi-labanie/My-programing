@@ -14,13 +14,10 @@ private:
     enum enMode { EmptyMode = 0, UpdateMode = 1, AddNewMode = 2 };
     enMode _Mode;
 
-
     string _AccountNumber;
     string _PinCode;
     float _AccountBalance;
     bool _MarkedForDelete = false;
-
-
 
     static clsBankClient _ConvertLinetoClientObject(string Line, string Seperator = "#//#")
     {
@@ -29,10 +26,12 @@ private:
 
         return clsBankClient(enMode::UpdateMode, vClientData[0], vClientData[1], vClientData[2],
             vClientData[3], vClientData[4], vClientData[5], stod(vClientData[6]));
+
     }
 
     static string _ConverClientObjectToLine(clsBankClient Client, string Seperator = "#//#")
     {
+
         string stClientRecord = "";
         stClientRecord += Client.FirstName + Seperator;
         stClientRecord += Client.LastName + Seperator;
@@ -43,6 +42,7 @@ private:
         stClientRecord += to_string(Client.AccountBalance);
 
         return stClientRecord;
+
     }
 
     static  vector <clsBankClient> _LoadClientsDataFromFile()
@@ -93,11 +93,15 @@ private:
                     //we only write records that are not marked for delete.  
                     DataLine = _ConverClientObjectToLine(C);
                     MyFile << DataLine << endl;
+
                 }
+
             }
 
             MyFile.close();
+
         }
+
     }
 
     void _Update()
@@ -198,23 +202,6 @@ public:
     }
     __declspec(property(get = GetAccountBalance, put = SetAccountBalance)) float AccountBalance;
 
-   /* 
-      No UI Related code iside object.
-    void Print()
-    {
-        cout << "\nClient Card:";
-        cout << "\n___________________";
-        cout << "\nFirstName   : " << FirstName;
-        cout << "\nLastName    : " << LastName;
-        cout << "\nFull Name   : " << FullName();
-        cout << "\nEmail       : " << Email;
-        cout << "\nPhone       : " << Phone;
-        cout << "\nAcc. Number : " << _AccountNumber;
-        cout << "\nPassword    : " << _PinCode;
-        cout << "\nBalance     : " << _AccountBalance;
-        cout << "\n___________________\n";
-
-    }*/
 
     static clsBankClient Find(string AccountNumber)
     {
@@ -320,6 +307,8 @@ public:
         }
         }
 
+
+
     }
 
     static bool IsClientExist(string AccountNumber)
@@ -341,6 +330,7 @@ public:
                 C._MarkedForDelete = true;
                 break;
             }
+
         }
 
         _SaveCleintsDataToFile(_vClients);
@@ -361,6 +351,19 @@ public:
         return _LoadClientsDataFromFile();
     }
 
+
+    void Deposit(double Amount)
+    {
+        _AccountBalance += Amount;
+        Save();
+    }
+
+    void Withdraw(double Amount)
+    {
+        _AccountBalance -= Amount;
+        Save();
+    }
+
     static double GetTotalBalances()
     {
         vector <clsBankClient> vClients = clsBankClient::GetClientsList();
@@ -374,6 +377,6 @@ public:
         }
 
         return TotalBalances;
-
     }
+
 };
