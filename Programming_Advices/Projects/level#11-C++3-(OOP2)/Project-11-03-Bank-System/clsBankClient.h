@@ -358,10 +358,15 @@ public:
         Save();
     }
 
-    void Withdraw(double Amount)
+    bool Withdraw(double Amount)
     {
+        if (Amount <= 0 || Amount > _AccountBalance)
+            return false;
+
         _AccountBalance -= Amount;
         Save();
+
+        return true;
     }
 
     static double GetTotalBalances()
