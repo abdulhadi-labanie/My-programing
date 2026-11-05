@@ -269,22 +269,17 @@ public:
         {
             if (IsEmpty())
             {
-
                 return enSaveResults::svFaildEmptyObject;
-
             }
 
+            break;
         }
 
         case enMode::UpdateMode:
         {
-
-
             _Update();
 
             return enSaveResults::svSucceeded;
-
-            break;
         }
 
         case enMode::AddNewMode:
@@ -303,12 +298,9 @@ public:
                 return enSaveResults::svSucceeded;
             }
 
-            break;
         }
         }
-
-
-
+        return enSaveResults::svFaildEmptyObject;
     }
 
     static bool IsClientExist(string AccountNumber)
