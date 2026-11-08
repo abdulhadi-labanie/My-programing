@@ -205,8 +205,7 @@ public:
 
     static clsBankClient Find(string AccountNumber)
     {
-
-
+        
         fstream MyFile;
         MyFile.open("Clients.txt", ios::in);//read Mode
 
@@ -374,6 +373,18 @@ public:
         }
 
         return TotalBalances;
+    }
+
+    bool Transfer(float Amount, clsBankClient& DestinationClient)
+    {
+        if (Amount > AccountBalance)
+        {
+            return false;
+        }
+    
+        Withdraw(Amount);
+        DestinationClient.Deposit(Amount);
+        return true;
     }
 
 };

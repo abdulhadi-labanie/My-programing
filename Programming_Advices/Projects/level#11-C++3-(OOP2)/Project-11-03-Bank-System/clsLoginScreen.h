@@ -20,7 +20,6 @@ private:
         string Username, Password;
         do
         {
-
             if (LoginFaild)
             {
                 FaildLoginCount++;
@@ -48,19 +47,18 @@ private:
 
         } while (LoginFaild);
 
+        CurrentUser.RegisterLogIn();
         clsMainScreen::ShowMainMenue();
         return true;
     }
 
 public:
 
-
     static bool ShowLoginScreen()
     {
         system("cls");
         _DrawScreenHeader("\t    Login Screen");
         return _Login();
-
     }
 
 };

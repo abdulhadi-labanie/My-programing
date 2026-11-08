@@ -114,8 +114,14 @@ private:
             Permissions += clsUser::enPermissions::pManageUsers;
         }
 
-        return Permissions;
+        cout << "\nLogin Register? y/n? ";
+        cin >> Answer;
+        if (Answer == 'y' || Answer == 'Y')
+        {
+            Permissions += clsUser::enPermissions::pLoginRegister;
+        }
 
+        return Permissions;
     }
 
 public:
@@ -145,27 +151,25 @@ public:
 
         switch (SaveResult)
         {
-        case  clsUser::enSaveResults::svSucceeded:
-        {
-            cout << "\nUser Addeded Successfully :-)\n";
-            _PrintUser(NewUser);
-            break;
-        }
-        case clsUser::enSaveResults::svFaildEmptyObject:
-        {
-            cout << "\nError User was not saved because it's Empty";
-            break;
+            case  clsUser::enSaveResults::svSucceeded:
+            {
+                cout << "\nUser Addeded Successfully :-)\n";
+                _PrintUser(NewUser);
+                break;
+            }
+            case clsUser::enSaveResults::svFaildEmptyObject:
+            {
+                cout << "\nError User was not saved because it's Empty";
+                break;
 
-        }
-        case clsUser::enSaveResults::svFaildUserExists:
-        {
-            cout << "\nError User was not saved because UserName is used!\n";
-            break;
+            }
+            case clsUser::enSaveResults::svFaildUserExists:
+            {
+                cout << "\nError User was not saved because UserName is used!\n";
+                break;
 
-        }
+            }
         }
     }
-
-
 
 };
